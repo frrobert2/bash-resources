@@ -120,4 +120,4 @@ Which behavior is more generally useful? The second, of course - where we have t
 
 Setting IFS to $'\n\t' means that word splitting will happen only on newlines and tab characters. This very often produces useful splitting behavior. By default, bash sets this to $' \n\t' - space, newline, tab - which is too eager.
 
-(Reference)[http://redsymbol.net/articles/unofficial-bash-strict-mode/]
+[Reference](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
