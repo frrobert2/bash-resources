@@ -84,7 +84,6 @@ names=(
   "Aaron Maxwell"
   "Wayne Gretzky"
   "David Beckham"
-  "Anderson da Silva"
 )
 
 echo "With default IFS value..."
@@ -98,8 +97,10 @@ IFS=$'\n\t'
 for name in ${names[@]}; do
   echo "$name"
 done
-(Yes, I'm putting my name on a list of great athletes. Indulge me.) This is the output:
 
+```
+```
+## Output
 With default IFS value...
 Aaron
 Maxwell
@@ -107,17 +108,14 @@ Wayne
 Gretzky
 David
 Beckham
-Anderson
-da
-Silva
 
 With strict-mode IFS value...
 Aaron Maxwell
 Wayne Gretzky
 David Beckham
-Anderson da Silva
+```
 Or consider a script that takes filenames as command line arguments:
-
+```
 for arg in $@; do
     echo "doing something with file: $arg"
 done
