@@ -9,6 +9,7 @@ set -euo pipefail is short for:
 set -e
 set -u
 set -o pipefail
+set -x
 ```
 
 
@@ -18,6 +19,8 @@ The set -e option instructs bash to immediately exit if any command [1] has a no
 By default, bash does not do this. This default behavior is exactly what you want if you are using bash on the command line - you don't want a typo to log you out! But in a script, you really want the opposite. If one line in a script fails, but the last line succeeds, the whole script has a successful exit code. That makes it very easy to miss the error.
 
 Again, what you want when using bash as your command-line shell and using it in scripts are at odds here. Being intolerant of errors is a lot better in scripts, and that's what set -e gives you.
+
+* set -x enables a mode of the shell where all executed commands are printed to the terminal. In your case it's clearly used for debugging, which is a typical use case for set -x : printing every command as it is executed may help you to visualize the control flow of the script if it is not functioning as expected.
 
 * set -u
 set -u affects variables. When set, a reference to any variable you haven't previously defined - with the exceptions of $* and $@ - is an error, and causes the program to immediately exit. Languages like Python, C, Java and more all behave the same way, for all sorts of good reasons. One is so typos don't create new variables without you realizing it. For example:
