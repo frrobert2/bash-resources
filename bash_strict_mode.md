@@ -36,16 +36,21 @@ Take a moment and look. Do you see the error? The right-hand side of the third l
 * set -o pipefail
 This setting prevents errors in a pipeline from being masked. If any command in a pipeline fails, that return code will be used as the return code of the whole pipeline. By default, the pipeline's return code is that of the last command - even if it succeeds. Imagine finding a sorted list of matching lines in a file:
 ```
-% grep some-string /non/existent/file | sort
+$ grep some-string /non/existent/file | sort
 grep: /non/existent/file: No such file or directory
 % echo $?
 0
-(% is the bash prompt.) Here, grep has an exit code of 2, writes an error message to stderr, and an empty string to stdout. This empty string is then passed through sort, which happily accepts it as valid input, and returns a status code of 0. This is fine for a command line, but bad for a shell script: you almost certainly want the script to exit right then with a nonzero exit code... like this:
+```
 
-% set -o pipefail
-% grep some-string /non/existent/file | sort
+Here, grep has an exit code of 2, writes an error message to stderr, and an empty string to stdout. 
+This empty string is then passed through sort, which happily accepts it as valid input, and returns a status code of 0. 
+This is fine for a command line, but bad for a shell script: you almost certainly want the script to exit right then with a nonzero exit code... like this:
+
+```
+$ set -o pipefail
+$ grep some-string /non/existent/file | sort
 grep: /non/existent/file: No such file or directory
-% echo $?
+$ echo $?
 2
 ```
 Setting IFS
@@ -122,5 +127,6 @@ If you invoke this as myscript.sh notes todo-list 'My Resume.doc', then with the
 Which behavior is more generally useful? The second, of course - where we have the ability to not split on spaces. If we have an array of strings that in general contain spaces, we normally want to iterate through them item by item, and not split an individual item into several.
 
 Setting IFS to $'\n\t' means that word splitting will happen only on newlines and tab characters. This very often produces useful splitting behavior. By default, bash sets this to $' \n\t' - space, newline, tab - which is too eager.
+
 
 [Full Reference Click Here](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
