@@ -4,7 +4,7 @@ The `set` lines
   - These lines deliberately cause your script to fail. Wait, what? Believe me, this is a good thing. 
   - With these settings, certain common errors will cause the script to immediately fail, explicitly and loudly. Otherwise, you can get hidden bugs that are discovered only when they blow up in production.
 
-* `set -euo pipefail` is short for:
+* `set -euxo pipefail` is short for:
 ```
 set -e
 set -u
