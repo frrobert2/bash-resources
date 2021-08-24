@@ -1,4 +1,4 @@
-### set -e, -u, -o, -x pipefail
+###  set -e, -u, -x, -o
 
 The `set` lines
   - These lines deliberately cause your script to fail. Wait, what? Believe me, this is a good thing. 
