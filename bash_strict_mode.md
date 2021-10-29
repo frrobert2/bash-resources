@@ -128,5 +128,5 @@ done
 * Setting IFS to $'\n\t' means that word splitting will happen only on newlines and tab characters. This very often produces useful splitting behavior. 
 * By default, bash sets this to $' \n\t' - space, newline, tab - which is too eager.
 
-
-[Full Reference Click Here](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
+## Citation:
+  * Maxwell, A. (2017). Unofficial-bash-strict-mode. Retrieved 2018, from http://redsymbol.net/articles/unofficial-bash-strict-mode/
