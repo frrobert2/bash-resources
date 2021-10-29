@@ -146,4 +146,4 @@ Or consider a script that takes filenames as command line arguments:
 * By default, bash sets this to $' \n\t' - space, newline, tab - which is too eager.
 
 ## Original Reference
-* Maxwell, A. (2017). Unofficial-bash-strict-mode. Retrieved 2018, from http://redsymbol.net/articles/unofficial-bash-strict-mode/
+* Maxwell, A. Unofficial-bash-strict-mode. Retrieved 2018, from http://redsymbol.net/articles/unofficial-bash-strict-mode/
