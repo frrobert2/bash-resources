@@ -1,11 +1,11 @@
 # Table of Contents
-    + [set -e, -u, -x, -o pipefail](#set--e---u---x---o-pipefail)
-    + [set -e](#set--e)
-    + [set -x](#set--x)
-    + [set -u](#set--u)
-    + [set -o pipefail](#set--o-pipefail)
-    + [Setting IFS](#setting-ifs)
-- [Citation:](#citation-)
+  * [set -e, -u, -x, -o pipefail](#set--e---u---x---o-pipefail)
+  * [set -e](#set--e-)
+  * [set -x](#set--x-)
+  * [set -u](#set--u-)
+  * [set -o pipefail](#set--o-pipefail-)
+  * [Setting IFS](#setting-ifs)
+  * [Citation:](#citation-)
 
 #### set -e, -u, -x, -o pipefail
 
