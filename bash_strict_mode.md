@@ -1,11 +1,11 @@
 # Table of Contents
-  * [set -e, -u, -x, -o pipefail](#set--e---u---x---o-pipefail)
-  * [set -e](#set--e-)
-  * [set -x](#set--x-)
-  * [set -u](#set--u-)
-  * [set -o pipefail](#set--o-pipefail-)
-  * [Setting IFS](#setting-ifs)
-  * [Citation:](#citation-)
+- [set -e, -u, -x, -o pipefail](#set--e--u--x--o-pipefail)
+- [set -e](#set--e)
+- [set -x](#set--x)
+- [set -u](#set--u)
+- [set -o pipefail](#set--o-pipefail)
+- [Setting IFS](#setting-ifs)
+- [Citations](#citations)
 
 #### set -e, -u, -x, -o pipefail
 
@@ -145,5 +145,5 @@ Or consider a script that takes filenames as command line arguments:
 * Setting IFS to $'\n\t' means that word splitting will happen only on newlines and tab characters. This very often produces useful splitting behavior. 
 * By default, bash sets this to $' \n\t' - space, newline, tab - which is too eager.
 
-## Citation:
+## Citations
 * Maxwell, A. (2017). Unofficial-bash-strict-mode. Retrieved 2018, from http://redsymbol.net/articles/unofficial-bash-strict-mode/
