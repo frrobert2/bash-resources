@@ -90,7 +90,7 @@
     c
     a b c
     ```
-* In the first for loop, IFS is set to $' '. (The $'...' syntax creates a string, with backslash-escaped characters replaced with special characters - like "\t" for tab and "\n" for newline.) Within the for loops, x and y are set to whatever bash considers a "word" in the original sequence. 
+* In the first for loop, IFS is set to `$' '`. The `$'...'` syntax creates a string, with backslash-escaped characters replaced with special characters - like "\t" for tab and "\n" for newline.) Within the for loops, x and y are set to whatever bash considers a "word" in the original sequence. 
 * For the first loop, IFS is a space, meaning that words are separated by a space character. 
 * For the second loop, "words" are separated by a newline, which means bash considers the whole value of "items" as a single word. If IFS is more than one character, splitting will be done on any of those characters.
 * Got all that? The next question is, why are we setting IFS to a string consisting of a tab character and a newline? Because it gives us better behavior when iterating over a loop. By "better", I mean "much less likely to cause surprising and confusing bugs". This is apparent in working with bash arrays:
